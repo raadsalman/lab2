@@ -2,7 +2,18 @@
 
 using namespace std;
 
+class Base {
+public:
+    Base() {
+        cout << "Construct of Base object" << endl;
+    }
+    ~Base() {
+        cout << "Destruct of Base object" << endl;
+    }
+};
+
 int main() {
-    cout << "Hello, World!" << endl;
+    cout << "* Create object Base" << endl;
+    Base base;
     return 0;
 }
