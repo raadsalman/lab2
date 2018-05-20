@@ -30,6 +30,9 @@ public:
     ~Child() {
         cout << "Destruct of Child object" << endl;
     }
+    void func() {
+        cout << "Function func() of class Child" << endl;
+    }
 };
 
 int main() {
