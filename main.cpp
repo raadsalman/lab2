@@ -13,7 +13,7 @@ public:
     ~Base() {
         cout << "Destruct of Base object" << endl;
     }
-    void func() {
+    void func() const {
         cout << "Function func() of class Base" << endl;
     }
 private:
@@ -30,10 +30,15 @@ public:
     ~Child() {
         cout << "Destruct of Child object" << endl;
     }
-    void func() {
+    void func() const {
         cout << "Function func() of class Child" << endl;
     }
 };
+
+void Function (const Base &obj) {
+    cout << "* Call method func() for object obj" << endl;
+    obj.func();
+}
 
 int main() {
     cout << "* Create object Base" << endl;
@@ -41,8 +46,8 @@ int main() {
     cout << "* Create object Child" << endl;
     Child child;
     cout << "* Call method func() for object Base" << endl;
-    base.func();
+    Function(base);
     cout << "* Call method func() for object Child" << endl;
-    child.func();
+    Function(child);
     return 0;
 }
