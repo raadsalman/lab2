@@ -13,7 +13,7 @@ public:
     ~Base() {
         cout << "Destruct of Base object" << endl;
     }
-    void func() const {
+    virtual void func() const {
         cout << "Function func() of class Base" << endl;
     }
 private:
